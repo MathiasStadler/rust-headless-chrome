@@ -14,7 +14,7 @@ fn main() -> Result<()> {
     let browser = Browser::new(options)?;
     let tab = browser.new_tab()?;
     let jpeg_data = tab
-        .navigate_to("https://www.wikipedia.org")?
+        .navigate_to("https://www.finviz.com")?
         .wait_until_navigated()?
         .capture_screenshot(CaptureScreenshotFormatOption::Jpeg, Some(75), None, true)?;
     fs::write("screenshot.jpg", jpeg_data)?;
